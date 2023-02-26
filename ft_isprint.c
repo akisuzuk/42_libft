@@ -6,15 +6,11 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 17:45:51 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 21:27:40 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:42:48 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// 今更だけど
-
-#include<stdio.h>
-#include<unistd.h>
-#include<ctype.h>
+#include "libft.h"
 
 int	ft_isprint(int c);
 

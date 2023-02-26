@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 13:32:54 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 14:44:22 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:51:19 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 //	int		i;
 //
 //	result = ft_strmapi(str, addOne);
-//	// このループでセグフォ出てたけど多分最終ループであかんところにアクセスしてんのかな
-//	// それか無限ループしてる？？
-//	//while (*result)
-//	//	printf("result=%c\n", *result++);
 //	i = 0;
 //	while(i < 6)
 //	{
-//		printf("result=%c\n", result[i]);	
+//		printf("result=%c\n", result[i]);
 //		i++;
 //	}
 //	free(result);

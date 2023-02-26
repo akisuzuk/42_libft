@@ -6,13 +6,11 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 12:23:44 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 20:18:03 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:42:12 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<unistd.h>
-#include<ctype.h>
+#include "libft.h"
 
 int	ft_isascii(int c);
 

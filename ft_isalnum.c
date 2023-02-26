@@ -6,13 +6,11 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 14:01:18 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 21:24:38 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:41:33 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<unistd.h>
-#include<ctype.h>
+#include "libft.h"
 
 int	ft_isalnum(int c);
 

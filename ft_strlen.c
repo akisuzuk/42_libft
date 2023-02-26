@@ -6,12 +6,11 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 12:25:57 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 20:25:20 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:50:54 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s);
 

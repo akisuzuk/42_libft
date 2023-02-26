@@ -6,14 +6,14 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 09:35:53 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 21:59:45 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:55:05 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-// テスター用に色々インクルード
+//  テスター用に色々インクルード
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

@@ -3,17 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 22:00:36 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 13:33:58 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:46:38 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
 #include "libft.h"
 
 char	**store_arr(char const *s, char c, char **ret, size_t count);
@@ -96,14 +92,14 @@ char	**ft_split(char const *s, char c)
 //	char	*splitme;
 //	char	**tab;
 //	int		i;
-//	
+//
 //	splitme = strdup("--1-2--3---4----5-----42");
 //	tab = ft_split(splitme, '-');
 //	i = 0;
 //	while (tab[i])
 //		printf("ret=%s\n", tab[i++]);
 //	return (0);
-//	
+//
 ////	char	str1[] = "--1-2--3---4----5-----42";
 ////	char	str2 = '-';
 //	//char	str1[] = " abc  def ghi  ";

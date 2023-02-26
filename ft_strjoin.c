@@ -3,45 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 18:40:53 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/18 11:52:26 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:55:29 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-// 今更ですがstrcatとstrjoinの違いは、mallocで全く新しい領域を作るかどうか、だけだよね
-// catは片方のケツのアドレスにもう片方のアタマのアドレスを連結するだけ
-
-// storeの中身、最初これで書いてたけど格納されない。。。何故。。。
-	/*
-	while (*pre)
-		*ret++ = *pre++;
-	while (*suf)
-		*ret++ = *suf++;
-	return (ret);
-	*/
-
-// 空文字列""の処理がわからんな。。。
-// 前後に\0が入る可能性考慮してmallocで文字量=@にしちゃったけど問題なかっただろうか
-// どっちにしろ前後に\0入れる場合はstoreでなんとかするしかないっすね
-// とりあえず”42”とjoin("", "42")は明確に違うということはわかった。
-
-// ★※★※★まだsubstr完成してないからこれ終わったらやること
-
-// ft_strjoin("", "42")がいつまでも合わねえ！って思ってたら。テスター見るに
-// 最初のEOSは無視されて'4' '2' '\0' になるぽいね。。。
-// 仕様にないことを察して実装するのは萎えるわ〜
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
+#include "libft.h"
 
 char	*store(char *pre, char *suf, char *ret);
 char	*store_2(char *suf, char *ret, int j);
-int		ft_strlen(char *str);
 char	*generate(char *pre, char *suf);
 char	*ft_strjoin(char const *s1, char const *s2);
 
@@ -84,16 +56,6 @@ char	*store(char *pre, char *suf, char *ret)
 	return (ret);
 }
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
 char	*generate(char *pre, char *suf)
 {
 	int		prelen;
@@ -107,7 +69,6 @@ char	*generate(char *pre, char *suf)
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)
-//char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	char	*char_s1;
 	char	*char_s2;

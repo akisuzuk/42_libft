@@ -6,20 +6,17 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 12:23:44 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 21:08:34 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:42:36 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<unistd.h>
-#include<ctype.h>
+#include "libft.h"
 
 int	ft_isdigit(int c);
 
 int	ft_isdigit(int c)
 //int	ft_isdigit(char moji)
 {
-	//if (c - '0' >= '0' && c - '0' <= '9')
 	if (c >= '0' && c <= '9')
 		return (1);
 	else

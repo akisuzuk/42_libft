@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:15:47 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/01/28 15:32:16 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:50:12 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// うーん-1の処理が本家と違うけどテスター通ったの納得いかねえ。。。
-
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
@@ -28,12 +24,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		*dst++ = *src++;
 		len++;
 	}
-	// ここでdstずらさなくて済むようにlenは0でなく1スタートにしてある
 	if (dstsize)
 		*dst = '\0';
 	while (*src++)
 		len++;
-	// lenをこっちの都合で1スタートにしたので1引いて戻してやる
 	return (len - 1);
 }
 
@@ -59,7 +53,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 //	printf("%s\n", str1);
 //	printf("%s\n", str2);
 //	ret = ft_strlcpy(str1, str2, -1);
-//	//ret = strlcpy(str1, str2, -1); 
+//	//ret = strlcpy(str1, str2, -1);
 //	printf("---PROCESSED---\n");
 //	printf("%s\n", str1);
 //	printf("%s\n", str2);

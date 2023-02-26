@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:53:22 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/01/28 18:44:39 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:53:59 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_tolower(int c);
 

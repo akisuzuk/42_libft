@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 21:00:11 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 11:20:26 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:51:34 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (0);
 		i++;
 	}
-	// -256とかでぶっ飛んで一周してる場合を考慮して絶対値で比較
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 
 //int	main(void)
 //{
-//	
+//
 //	char *str = "libft-test-tokyo";
 //	char *cmp = "libft";
 //	size_t	n;

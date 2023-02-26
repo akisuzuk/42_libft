@@ -3,32 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 10:09:35 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/18 13:01:55 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:56:56 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-int		ft_strlen(char *str);
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

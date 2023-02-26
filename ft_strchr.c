@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 11:30:57 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/01/29 14:00:55 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:46:51 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// あーテストケースの3つ目のKO、終端文字をサーチしてないということか
-// 腹ただしいなww
-
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c);
 
@@ -41,7 +37,7 @@ char	*ft_strchr(const char *s, int c)
 //	char	*p;
 //
 //	//printf("%c\n", 't'+1);
-//	
+//
 //	p = ft_strchr(test, 0);
 //	//p = strchr(test, 0);
 //	printf("ret= %s\n", p);

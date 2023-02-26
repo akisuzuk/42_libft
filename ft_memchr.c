@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 11:30:57 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/01/29 16:52:46 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:43:14 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// 今回はstrchrと違って引数sが文字列と限らない(void)なのでchar型に直す必要ありっすね
-// うーんn=0の時はwhileもifもかっ飛ばすからnull返すはずなのに(実際ローカルでは返してる)
-// なんかテスターと整合しないんで不本意ながらアタマにif(n==0)をつけた。。。
-
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
@@ -46,7 +41,7 @@ int	main(void)
 	char	*p;
 
 	//printf("%c\n", 't'+1);
-	
+
 	//p = ft_memchr(test, 0, 0);
 	p = memchr(test, 0, 0);
 	printf("ret= %s\n", p);

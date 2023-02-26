@@ -3,18 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:15:47 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/01/27 21:48:59 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/26 19:43:51 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
-// restrict禁止だったのかよ〜manの通りのプロトタイプ宣言がダメなこともあるのね
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
