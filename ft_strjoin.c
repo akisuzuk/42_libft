@@ -12,82 +12,68 @@
 
 #include "libft.h"
 
-char	*store(char *pre, char *suf, char *ret);
-char	*store_2(char *suf, char *ret, int j);
-char	*generate(char *pre, char *suf);
 char	*ft_strjoin(char const *s1, char const *s2);
 
-char	*store_2(char *suf, char *ret, int j)
+char	*store(char const *pre, char const *suf, char *ret)
 {
-	int	i;
-
-	i = 0;
-	if (suf[i] == '\0')
-		ret[j] = '\0';
-	else
-	{
-		while (suf[i] != '\0')
-		{
-			ret[j] = suf[i];
-			i++;
-			j++;
-		}
-	}
-	return (ret);
-}
-
-char	*store(char *pre, char *suf, char *ret)
-{
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
-	if (pre[i] != '\0')
+	while (pre[i] != '\0')
 	{
-		while (pre[i] != '\0')
-		{
-			ret[j] = pre[i];
-			i++;
-			j++;
-		}
+		ret[j] = pre[i];
+		i++;
+		j++;
 	}
-	ret = store_2(suf, ret, j);
-	return (ret);
-}
-
-char	*generate(char *pre, char *suf)
-{
-	int		prelen;
-	int		suflen;
-	char	*ret;
-
-	prelen = ft_strlen(pre);
-	suflen = ft_strlen(suf);
-	ret = (char *)malloc((prelen + 1 + suflen + 1) * sizeof(char));
+	i = 0;
+	while (suf[i] != '\0')
+	{
+		ret[j] = suf[i];
+		i++;
+		j++;
+	}
 	return (ret);
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*char_s1;
-	char	*char_s2;
 	char	*ret;
-	int		prelen;
-	int		suflen;
+	size_t	prelen;
+	size_t	suflen;
 
-	char_s1 = (char *)s1;
-	char_s2 = (char *)s2;
-	ret = generate(char_s1, char_s2);
-	ret = store(char_s1, char_s2, ret);
-	prelen = ft_strlen(char_s1);
-	suflen = ft_strlen(char_s2);
-	if (prelen + suflen == 0)
-		*ret = '\0';
-	else
-		ret[prelen + suflen] = '\0';
+	if (!s1 || !s2)
+		return (NULL);
+	prelen = ft_strlen(s1);
+	suflen = ft_strlen(s2);
+	ret = malloc(sizeof(char) * (prelen + suflen + 1));
+	if (!ret)
+		return (NULL);
+	ret = store(s1, s2, ret);
+	ret[prelen + suflen] = '\0';
 	return (ret);
 }
+
+
+// char	*ft_strjoin(const char *s1, const char *s2)
+// {
+// 	char	*ret;
+// 	char	*head;
+
+// 	if (!s1 || !s2)
+// 		return (NULL);
+// 	ret = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+// 	if (ret == NULL)
+// 		return (0);
+// 	head = ret;
+// 	while (*s1)
+// 		*ret++ = *s1++;
+// 	while (*s2)
+// 		*ret++ = *s2++;
+// 	*ret = '\0';
+// 	return (head);
+// }
 
 //int	main(void)
 //{

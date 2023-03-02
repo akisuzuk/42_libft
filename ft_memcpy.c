@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:15:47 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:43:51 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/28 22:05:31 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int					i;
-	int					int_n;
+	size_t				i;
 	unsigned char		*unchar_dst;
 	const unsigned char	*cons_unchar_src;
 
@@ -26,8 +25,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		i = 0;
 		unchar_dst = (unsigned char *)dst;
 		cons_unchar_src = (const unsigned char *)src;
-		int_n = (int)n;
-		while (i < int_n)
+		while (i < n)
 		{
 			*unchar_dst++ = *cons_unchar_src++;
 			i++;

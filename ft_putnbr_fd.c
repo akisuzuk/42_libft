@@ -3,58 +3,73 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 18:01:37 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 20:06:04 by akisuzuk         ###   ########.fr       */
+/*   Created: 2023/03/02 14:53:51 by akisuzuk          #+#    #+#             */
+/*   Updated: 2023/03/02 15:24:35 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	output(int num[], int i, int fd);
-void	ft_putnbr_fd(int n, int fd);
-
-void	output(int num[], int i, int fd)
+size_t	count_len(int n)
 {
-	char	opc;
+	size_t	len;
 
-	while (i > 0)
+	if (n == 0)
+		return (1);
+	len = 0;
+	while (n)
 	{
-		opc = num[i - 1] + '0';
-		write(fd, &opc, 1);
-		i--;
+		len++;
+		n /= 10;
 	}
+	return (len);
+}
+
+size_t	ft_pow(size_t n)
+{
+	size_t	ret;
+	size_t	i;
+
+	ret = 1;
+	i = 0;
+	while (i < n)
+	{
+		ret *= 10;
+		i++;
+	}
+	return (ret);
 }
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int	num[12];
-	int	i;
+	int		base;
+	int		num_len;
+	char	num;
 
-	if (n == -2147483648)
-		write(fd, "-2147483648", 11);
-	else if (n == 0)
+	if (n == 0)
+	{
 		write(fd, "0", 1);
-	else
+		return ;
+	}
+	if (n < 0)
+		write(fd, "-", 1);
+	num_len = count_len(n);
+	base = ft_pow(num_len - 1);
+	while (num_len)
 	{
 		if (n < 0)
-		{
-			write(fd, "-", 1);
-			n *= -1;
-		}
-		i = 0;
-		while (n != 0)
-		{
-			num[i] = n % 10;
-			n /= 10;
-			i++;
-		}
-		output(num, i, fd);
+			num = ((n / base) % 10) * -1 + '0';
+		else
+			num = n / base % 10 + '0';
+		write(fd, &num, 1);
+		num_len--;
+		base /= 10;
 	}
 }
 
-//
+
 //int	main(void)
 //{
 //	ft_putnbr_fd(-2147483648, 1);

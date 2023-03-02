@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 12:25:57 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:50:54 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:14:15 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 size_t	ft_strlen(const char *s);
 
 size_t	ft_strlen(const char *s)
-//int	ft_strlen(char *str)
 {
 	size_t	i;
 

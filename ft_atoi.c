@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 08:38:35 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 20:22:08 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 15:00:24 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,28 @@
 
 int	ft_atoi(const char *str);
 
-long	nega(long ret, const char *str)
+bool	is_over_long(long ret, const char *str, int sign)
 {
-	while (*str >= '0' && *str <= '9')
-	{
-		if (ret < LONG_MIN / 10)
-			return ((int)LONG_MIN);
-		if (ret == LONG_MIN / 10 && -(*str - '0') < LONG_MIN % 10)
-			return ((int)LONG_MIN);
-		ret = ret * 10 - (*str - '0');
-		str++;
-	}
-	return (ret);
-}
-
-long	posi(long ret, const char *str)
-{
-	while (*str >= '0' && *str <= '9')
+	if (sign == 1)
 	{
 		if (ret > LONG_MAX / 10)
-			return (LONG_MAX);
+			return (true);
 		if (ret == LONG_MAX / 10 && *str - '0' > LONG_MAX % 10)
-			return (LONG_MAX);
-		ret = ret * 10 + (*str - '0');
-		str++;
+			return (true);
 	}
-	return (ret);
+	else
+	{
+		if (ret < LONG_MIN / 10)
+			return (true);
+		if (ret == LONG_MIN / 10 && - (*str - '0') < LONG_MIN % 10)
+			return (true);
+	}
+	return (false);
 }
 
 int	ft_atoi(const char *str)
 {
-	long	sign;
+	int		sign;
 	long	ret;
 
 	ret = 0;
@@ -59,14 +50,16 @@ int	ft_atoi(const char *str)
 	}
 	if (*str < '0' || *str > '9')
 		return (0);
-	else
+	while (*str >= '0' && *str <= '9')
 	{
-		if (sign == 1)
-			ret = posi(ret, str);
-		else
-			ret = nega(ret, str);
+		if (sign == 1 && is_over_long(ret, str, sign))
+			return ((int)LONG_MAX);
+		if (sign == -1 && is_over_long(ret, str, sign))
+			return ((int)LONG_MIN);
+		ret = ret * 10 + (*str - '0') * (sign);
+		str++;
 	}
-	return ((int)ret);
+	return (ret);
 }
 
 //int	main(void)

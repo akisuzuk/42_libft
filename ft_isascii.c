@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 12:23:44 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:42:12 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 15:12:17 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 int	ft_isascii(int c);
 
 int	ft_isascii(int c)
-//int	ft_isascii(char moji)
 {
-	if (c - 0 < 0 || c - 0 > 127)
+	if (c < 0 || c > 127)
 		return (0);
 	else
 		return (1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:15:47 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:40:43 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/28 22:43:34 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,18 @@ void	*ft_bzero(void *s, size_t n);
 
 void	*ft_bzero(void *s, size_t n)
 {
-	int				i;
-	int				int_n;
+	size_t			i;
 	unsigned char	*unchar_s;
 
 	if (n != 0)
 	{
-		int_n = (int)n;
 		unchar_s = (unsigned char *)s;
 		i = 0;
-		while (i < int_n)
+		while (i < n)
 		{
 			*unchar_s++ = '\0';
 			i++;
 		}
-		return (unchar_s);
 	}
 	return (s);
 }

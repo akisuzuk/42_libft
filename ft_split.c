@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 22:00:36 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:46:38 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:01:37 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ char	**store_arr(char const *s, char c, char **ret, size_t count)
 		while (s[j] != '\0')
 		{
 			if ((j == 0 && s[j] != c) || (j > 0 && s[j] != c && s[j - 1] == c))
-			{
-				head = j;
 				break ;
-			}
 			j++;
 		}
+		head = j;
 		while (s[j] && s[j] != c)
 			j++;
 		ret[i] = malloc(sizeof(char) * (j - head + 1));
+		if (!ret[i])
+			return (NULL);
 		ft_memmove(ret[i], s + head, j - head);
 		ret[i++][(j++) - head] = '\0';
 	}

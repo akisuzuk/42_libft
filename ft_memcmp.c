@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 11:30:57 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:43:28 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 14:52:46 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
-//void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*unchr_s1;
 	unsigned char	*unchr_s2;

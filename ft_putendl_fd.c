@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:08:45 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 19:41:18 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/28 22:19:07 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,7 @@ void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int		i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }
 

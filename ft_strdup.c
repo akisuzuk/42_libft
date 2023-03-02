@@ -15,11 +15,10 @@
 char	*ft_strdup(const char *s1);
 
 char	*ft_strdup(const char *s1)
-//char	*ft_strdup(char *src)
 {
-	int		slen;
+	size_t	slen;
 	char	*ret;
-	int		i;
+	size_t	i;
 
 	slen = 0;
 	while (s1[slen] != '\0')

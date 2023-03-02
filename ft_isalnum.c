@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 14:01:18 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:41:33 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 14:51:19 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,11 @@
 int	ft_isalnum(int c);
 
 int	ft_isalnum(int c)
-//int	ft_isalnum(char moji)
 {
-	if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z'))
-	{
-		if (c < '0' || c > '9')
-			return (0);
-		else
-			return (1);
-	}
-	else
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
+	else
+		return (0);
 }
 
 //

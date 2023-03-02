@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 11:30:57 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:43:14 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/28 22:04:32 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	*ft_memchr(const void *s, int c, size_t n);
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char			*char_s;
+	unsigned char	*char_s;
 	unsigned char	unchar_c;
 
 	if (n == 0)
 		return (NULL);
-	char_s = (char *)s;
+	char_s = (unsigned char *)s;
 	unchar_c = (unsigned char)c;
 	while (n--)
 	{

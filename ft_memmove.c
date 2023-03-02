@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:15:47 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:44:59 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/02/28 22:12:16 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,21 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int					int_len;
 	unsigned char		*unchar_dst;
 	const unsigned char	*cons_unchar_src;
 
-	int_len = (int)len;
 	unchar_dst = (unsigned char *)dst;
 	cons_unchar_src = (const unsigned char *)src;
 	if (dst <= src)
 	{
-		while (int_len--)
+		while (len--)
 			*unchar_dst++ = *cons_unchar_src++;
 	}
 	else
 	{
-		unchar_dst += int_len;
-		cons_unchar_src += int_len;
-		while (int_len--)
+		unchar_dst += len;
+		cons_unchar_src += len;
+		while (len--)
 			*--unchar_dst = *--cons_unchar_src;
 	}
 	return (dst);

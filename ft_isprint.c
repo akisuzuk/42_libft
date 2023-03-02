@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 17:45:51 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:42:48 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 15:18:20 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 int	ft_isprint(int c);
 
 int	ft_isprint(int c)
-//int	ft_isprint(char moji)
 {
-	if (c - 0 < 32 || c - 0 > 126)
+	if (c < 32 || c > 126)
 		return (0);
 	else
 		return (1);

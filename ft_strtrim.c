@@ -3,67 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 18:40:53 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:57:54 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:16:42 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c);
-void	*ft_bzero(void *s, size_t n);
-void	*ft_calloc(size_t count, size_t size);
 char	*ft_strtrim(char const *s1, char const *set);
-
-char	*ft_strchr(const char *s, int c)
-{
-	char	char_c;
-
-	char_c = (char)c;
-	while (*s)
-	{
-		if (*s == char_c)
-			return ((char *)s);
-		s++;
-	}
-	if (c == 0 && *s == c)
-		return ((char *)s);
-	return (NULL);
-}
-
-void	*ft_bzero(void *s, size_t n)
-{
-	int				i;
-	int				int_n;
-	unsigned char	*unchar_s;
-
-	if (n != 0)
-	{
-		int_n = (int)n;
-		unchar_s = (unsigned char *)s;
-		i = 0;
-		while (i < int_n)
-		{
-			*unchar_s++ = '\0';
-			i++;
-		}
-		return (unchar_s);
-	}
-	return (s);
-}
-
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*p;
-
-	if (count > SIZE_MAX / size)
-		return (NULL);
-	p = (void *)malloc(count * size);
-	ft_bzero(p, count * size);
-	return (p);
-}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
