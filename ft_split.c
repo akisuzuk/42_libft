@@ -6,14 +6,29 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 22:00:36 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/02 18:01:37 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 21:39:05 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+char	**freefunc(char **ret);
 char	**store_arr(char const *s, char c, char **ret, size_t count);
 char	**ft_split(char const *s, char c);
+
+char	**freefunc(char **ret)
+{
+	size_t	i;
+
+	i = 0;
+	while (ret[i])
+	{
+		free(ret[i]);
+		i++;
+	}
+	free(ret);
+	return (NULL);
+}
 
 char	**store_arr(char const *s, char c, char **ret, size_t count)
 {
@@ -36,7 +51,7 @@ char	**store_arr(char const *s, char c, char **ret, size_t count)
 			j++;
 		ret[i] = malloc(sizeof(char) * (j - head + 1));
 		if (!ret[i])
-			return (NULL);
+			return (freefunc(ret));
 		ft_memmove(ret[i], s + head, j - head);
 		ret[i++][(j++) - head] = '\0';
 	}
@@ -60,7 +75,9 @@ char	**ft_split(char const *s, char c)
 	ret = malloc(sizeof(char *) * (count + 1));
 	if (!ret)
 		return (NULL);
-	store_arr(s, c, ret, count);
+	ret = store_arr(s, c, ret, count);
+	if (ret == NULL)
+		return (NULL);
 	ret[count] = NULL;
 	return (ret);
 }

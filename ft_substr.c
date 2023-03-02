@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 10:09:35 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:56:56 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 22:56:52 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int_len = (int)len;
 	if (int_len > s_len)
 		len = (size_t)s_len;
-	ret = malloc((sizeof(char) * len + 1));
+	ret = malloc((sizeof(char) * (len + 1)));
 	if (!ret)
 		return (NULL);
 	head = ret;

@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 11:30:57 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:46:51 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/02 21:39:21 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 char	*ft_strchr(const char *s, int c);
 
@@ -25,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == 0 && *s == c)
+	if (char_c == '\0' && *s == char_c)
 		return ((char *)s);
 	return (NULL);
 }
@@ -38,9 +39,12 @@ char	*ft_strchr(const char *s, int c)
 //
 //	//printf("%c\n", 't'+1);
 //
-//	p = ft_strchr(test, 0);
-//	//p = strchr(test, 0);
-//	printf("ret= %s\n", p);
+//	//p = ft_strchr(test, -1);
+//	//p = strchr(test, -1);
+//	printf("ret= %s\n", ft_strchr(test, 0+(128*2)));
+//	printf("-------------\n");
+//	printf("ret= %s\n", strchr(test, 0+(128*2)));
 //	return (0);
 //}
+//
 //
