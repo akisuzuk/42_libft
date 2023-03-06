@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 14:53:51 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/02 15:24:35 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 00:44:58 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void	ft_putnbr_fd(int n, int fd)
 		base /= 10;
 	}
 }
-
 
 //int	main(void)
 //{

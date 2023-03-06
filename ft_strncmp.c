@@ -6,7 +6,7 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 21:00:11 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:51:34 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 00:43:44 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-
 
 //int	main(void)
 //{

@@ -6,7 +6,7 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 18:40:53 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:55:29 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 00:44:42 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ret[prelen + suflen] = '\0';
 	return (ret);
 }
-
 
 // char	*ft_strjoin(const char *s1, const char *s2)
 // {
