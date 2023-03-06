@@ -6,13 +6,11 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:08:45 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/28 22:19:07 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:47:21 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putendl_fd(char *s, int fd)
 {

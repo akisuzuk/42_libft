@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 15:20:22 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/02 15:20:28 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:38:31 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
 
 //#include <stdio.h>
 //

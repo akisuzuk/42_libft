@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 08:10:05 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:49:41 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:36:26 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dlen = d - dst;
 	n = dstsize - dlen;
 	if (n == 0)
-		return (dlen + strlen(s));
+		return (dlen + ft_strlen(s));
 	while (*s != '\0')
 	{
 		if (n != 1)
