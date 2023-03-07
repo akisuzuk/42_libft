@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 08:38:35 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/02 15:00:24 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 22:04:49 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_atoi(const char *str)
 
 	ret = 0;
 	sign = 1;
-	while (*str == 0 || (*str >= 9 && *str <= 13))
+	while (*str == 0 || (*str >= 9 && *str <= 13) || *str == 32)
 		str++;
 	if (*str == '-' || *str == '+')
 	{

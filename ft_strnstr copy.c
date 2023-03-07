@@ -1,16 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr copy.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:40:49 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/07 21:33:07 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 21:44:15 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+# include <string.h>
+# include <signal.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <stdint.h>
+# include <limits.h>
+# include <time.h>
+# include <stdbool.h>
+# include <sys/types.h>
+# include <sys/wait.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
@@ -60,19 +72,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 //
 //int	main(void)
 //{
-//	char	str1[] = "aaabcabcd";
-//	char	str2[] = "aabc";
+//	char	BFSIZE;
+//	size_t	size = BFSIZE * 4;
+//	char	*s2 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB";
+//	char	*s1 = malloc(size + 1);
 //
-//	printf("%s\n", str1);
-//	printf("%s\n", str2);
-//	printf("origin ret = %s\n", strnstr(str1, "abcd", 9));
-//	printf("myfunc ret = %s\n", ft_strnstr(str1, "abcd", 9));
-//	printf("---case114---\n");
-//	printf("origin ret = %s\n", strnstr("", "", 0));
-//	printf("myfunc ret = %s\n", ft_strnstr("", "", 0));
-//	printf("---case115---\n");
-//	printf("origin ret = %s\n", strnstr(NULL, "1", 0));
-//	printf("myfunc ret = %s\n", ft_strnstr(NULL, "1", 0));
-//	return (0);
+//	memset(s1, 'A', size);
+//	s1[size] = 0;
+//	printf("origin=%s\n", strnstr(s1, s2, size)); 
+//	printf("ft=%s\n", ft_strnstr(s1, s2, size)); 
 //}
 //

@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 22:00:36 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/02 21:39:05 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 21:51:11 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ char	**ft_split(char const *s, char c)
 	char		**ret;
 	size_t		i;
 
+	if (!s)
+		return (NULL);
 	count = 0;
 	i = 0;
 	while (s[i] != '\0')

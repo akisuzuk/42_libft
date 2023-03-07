@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:15:47 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/28 22:05:31 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 21:21:32 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char		*unchar_dst;
 	const unsigned char	*cons_unchar_src;
 
+	if (!dst && !src)
+		return (NULL);
 	if (n != 0)
 	{
 		i = 0;

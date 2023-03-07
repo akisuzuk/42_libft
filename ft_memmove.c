@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:15:47 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/28 22:12:16 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 21:22:37 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*unchar_dst;
 	const unsigned char	*cons_unchar_src;
 
+	if (!dst && !src)
+		return (NULL);
 	unchar_dst = (unsigned char *)dst;
 	cons_unchar_src = (const unsigned char *)src;
 	if (dst <= src)
