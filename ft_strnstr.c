@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:40:49 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/07 21:33:07 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 22:14:09 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*search(const char *haystack, const char *needle, size_t len)
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*ret;
-	
+
 	if (haystack == NULL)
 		return (NULL);
 	if (needle[0] == '\0' || needle == NULL)
