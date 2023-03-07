@@ -6,7 +6,7 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 18:40:53 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/07 11:50:16 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 14:13:26 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1[0] == '\0')
 		return ((char *)ft_calloc(1, 1));
 	head = 0;
-	while (ft_strchr(set, s1[head]) && s1[head + 1] != '\0')
+	while (ft_strchr(set, s1[head]) && s1[head] != '\0')
 		head++;
-	tail = ft_strlen((char *)s1) - 1;
+	tail = ft_strlen((char *)s1);
 	while (ft_strchr(set, s1[tail]) && head < tail)
 		tail--;
 	if (head <= tail)
@@ -42,8 +42,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 //int	main(void)
 //{
-//	//char	str1[] = "   xxx   xxx";
-//	//char	str2[] = " x";
+//	char	str1[] = "   xxx   xxx";
+//	char	str2[] = " x";
 //	//char	str1[] = "lorem ipsum dolor sit amet";
 //	//char	str2[] = "te";
 //	char	*joined;
@@ -57,3 +57,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 //	//printf("strcmp=%d\n", strcmp(joined, "42"));
 //	free(joined);
 //}
+//
