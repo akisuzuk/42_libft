@@ -6,7 +6,7 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 18:40:53 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/07 11:50:16 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/07 11:49:20 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	tail = ft_strlen((char *)s1) - 1;
 	while (ft_strchr(set, s1[tail]) && head < tail)
 		tail--;
+	if (head == tail)
+	{
+		ret = malloc(sizeof(char) * 1);
+		ret[0] = '\0';
+		return (ret);
+	}
 	if (head <= tail)
 		ret = malloc(sizeof(char) * (tail - head + 2));
 	if (tail < head || !ret)
