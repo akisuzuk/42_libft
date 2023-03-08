@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr copy 2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:40:49 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/08 23:51:53 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/08 23:50:52 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return (NULL);
 	if (needle[0] == '\0')
 		return ((char *)haystack);
+
+	// わかった。nullを関数の引数に渡した時点でセグフォになるっぽいので、
+	// 関数を分割して、渡した先でnullチェックすることができないのか
 	ret = search(haystack, needle, len);
 	if (ret)
 		return (ret);

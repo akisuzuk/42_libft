@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr copy.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:40:49 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/07 21:44:15 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/08 23:47:30 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,9 @@ char	*search(const char *haystack, const char *needle, size_t len)
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*ret;
-	
-	if (haystack == NULL)
-		return (NULL);
+
+	//if (haystack == NULL)
+	//	return (NULL);
 	if (needle[0] == '\0' || needle == NULL)
 		return ((char *)haystack);
 	ret = search(haystack, needle, len);
@@ -69,17 +69,18 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return (NULL);
 }
 
-//
-//int	main(void)
-//{
-//	char	BFSIZE;
-//	size_t	size = BFSIZE * 4;
-//	char	*s2 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB";
-//	char	*s1 = malloc(size + 1);
-//
-//	memset(s1, 'A', size);
-//	s1[size] = 0;
-//	printf("origin=%s\n", strnstr(s1, s2, size)); 
-//	printf("ft=%s\n", ft_strnstr(s1, s2, size)); 
-//}
-//
+
+int	main(void)
+{
+	//char	BFSIZE;
+	//size_t	size = BFSIZE * 4;
+	//char	*s2 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB";
+	//char	*s1 = malloc(size + 1);
+
+	//memset(s1, 'A', size);
+	//s1[size] = 0;
+	//printf("origin=%s\n", strnstr(s1, s2, size));
+	//printf("ft=%s\n", ft_strnstr(s1, s2, size));
+	printf("ft=%s\n", ft_strnstr(NULL, "fake", 0));
+}
+
