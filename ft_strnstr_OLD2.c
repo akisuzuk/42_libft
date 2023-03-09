@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr copy.c                                  :+:      :+:    :+:   */
+/*   ft_strnstr copy 2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:40:49 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/07 21:44:15 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/09 16:14:48 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-# include <string.h>
-# include <signal.h>
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <stdint.h>
-# include <limits.h>
-# include <time.h>
-# include <stdbool.h>
-# include <sys/types.h>
-# include <sys/wait.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
@@ -32,7 +20,7 @@ char	*search(const char *haystack, const char *needle, size_t len)
 	char	*ret;
 
 	i = 0;
-	while (*haystack != '\0' && len)
+	while (*haystack && len)
 	{
 		if (*haystack == needle[0])
 		{
@@ -40,10 +28,10 @@ char	*search(const char *haystack, const char *needle, size_t len)
 			i = 0;
 			while (*haystack == needle[i] && len--)
 			{
-				if (needle[i + 1] == '\0')
-					return (ret);
 				i++;
 				haystack++;
+				if (!needle[i])
+					return (ret);
 			}
 			haystack -= i;
 			len += i;
@@ -57,11 +45,14 @@ char	*search(const char *haystack, const char *needle, size_t len)
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*ret;
-	
+
 	if (haystack == NULL)
 		return (NULL);
-	if (needle[0] == '\0' || needle == NULL)
+	if (needle[0] == '\0')
 		return ((char *)haystack);
+
+	// わかった。nullを関数の引数に渡した時点でセグフォになるっぽいので、
+	// 関数を分割して、渡した先でnullチェックすることができないのか
 	ret = search(haystack, needle, len);
 	if (ret)
 		return (ret);
@@ -72,14 +63,19 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 //
 //int	main(void)
 //{
-//	char	BFSIZE;
-//	size_t	size = BFSIZE * 4;
-//	char	*s2 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB";
-//	char	*s1 = malloc(size + 1);
+//	char	str1[] = "aaabcabcd";
+//	char	str2[] = "aabc";
 //
-//	memset(s1, 'A', size);
-//	s1[size] = 0;
-//	printf("origin=%s\n", strnstr(s1, s2, size)); 
-//	printf("ft=%s\n", ft_strnstr(s1, s2, size)); 
+//	printf("%s\n", str1);
+//	printf("%s\n", str2);
+//	printf("origin ret = %s\n", strnstr(str1, "abcd", 9));
+//	printf("myfunc ret = %s\n", ft_strnstr(str1, "abcd", 9));
+//	printf("---case114---\n");
+//	printf("origin ret = %s\n", strnstr("", "", 0));
+//	printf("myfunc ret = %s\n", ft_strnstr("", "", 0));
+//	printf("---case115---\n");
+//	printf("origin ret = %s\n", strnstr(NULL, "1", 0));
+//	printf("myfunc ret = %s\n", ft_strnstr(NULL, "1", 0));
+//	return (0);
 //}
 //

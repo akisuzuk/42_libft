@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 13:32:54 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/25 15:25:48 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/08 22:33:04 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,14 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	size_t	len;
 	size_t	i;
 
-	len = ft_strlen((char *)s);
-	i = 0;
-	while (i < len)
-		f(i++, s++);
-	s -= len;
+	if (s)
+	{
+		len = ft_strlen((char *)s);
+		i = 0;
+		while (i < len)
+			f(i++, s++);
+		s -= len;
+	}
 }
 //
 //void	iter(unsigned int i, char *s)
