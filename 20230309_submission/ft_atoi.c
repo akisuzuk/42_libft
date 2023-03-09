@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_OLD.c                                      :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 08:38:35 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/09 16:36:04 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/09 16:37:57 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,16 @@ int	ft_atoi(const char *str)
 	int		sign;
 	long	ret;
 
-	// 結果は変わらんが、!*strの時は冒頭ですぐ0返して終了しないといけない。。。
+	if (!*str)
+		return (0);
 	ret = 0;
 	sign = 1;
 	while (*str == 0 || (*str >= 9 && *str <= 13) || *str == 32)
 		str++;
 	if (*str == '-' || *str == '+')
 	{
-		if (*str == '-')
+		if (*str++ == '-')
 			sign = -1;
-		str++;
 	}
 	if (*str < '0' || *str > '9')
 		return (0);
@@ -57,8 +57,7 @@ int	ft_atoi(const char *str)
 			return ((int)LONG_MAX);
 		if (sign == -1 && is_over_long(ret, str, sign))
 			return ((int)LONG_MIN);
-		ret = ret * 10 + (*str - '0') * (sign);
-		str++;
+		ret = ret * 10 + (*str++ - '0') * (sign);
 	}
 	return (ret);
 }
