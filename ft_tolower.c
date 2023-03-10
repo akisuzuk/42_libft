@@ -6,13 +6,11 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:53:22 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:53:59 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:22:20 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_tolower(int c);
 
 int	ft_tolower(int c)
 {

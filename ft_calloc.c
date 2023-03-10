@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:38:00 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/28 21:26:18 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:18:57 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_calloc(size_t count, size_t size);
 
 void	*ft_calloc(size_t count, size_t size)
 {

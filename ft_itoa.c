@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 15:20:22 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/06 21:38:31 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:46:12 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_size(int n)
+static	size_t	count_size(int n);
+
+static	size_t	count_size(int n)
 {
 	size_t	len;
 

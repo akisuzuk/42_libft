@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:15:47 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/07 21:21:32 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:27:38 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -32,7 +30,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 			*unchar_dst++ = *cons_unchar_src++;
 			i++;
 		}
-		return (dst);
 	}
 	return (dst);
 }

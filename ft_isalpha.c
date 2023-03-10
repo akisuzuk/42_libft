@@ -6,13 +6,11 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 09:38:33 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:41:51 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:19:11 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_isalpha(int c);
 
 int	ft_isalpha(int c)
 {

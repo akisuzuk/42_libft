@@ -6,7 +6,7 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 08:10:05 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/11 00:29:10 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/11 00:09:53 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,31 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char		*d;
-	const char	*s;
-	size_t		addlen;
-	size_t		dlen;
+	size_t	s_length;
+	size_t	remaining_size;
+	size_t	d_length;
+	size_t	copy_length;
 
-	d = dst;
-	s = src;
-	addlen = dstsize;
-	while (addlen-- != 0 && *d != '\0')
-		d++;
-	dlen = d - dst;
-	addlen = dstsize - dlen;
-	if (addlen == 0)
-		return (dlen + ft_strlen(s));
-	while (*s != '\0')
+	s_length = ft_strlen(src);
+	remaining_size = dstsize;
+	while (*dst && remaining_size > 0)
 	{
-		if (addlen != 1)
-		{
-			*d++ = *s;
-			addlen--;
-		}
-		s++;
+		dst++;
+		remaining_size--;
 	}
-	*d = '\0';
-	return (dlen + (s - src));
+	// Length of destination is the lesser of `size` and
+	// offset of the null character, if any.
+	d_length = dstsize - remaining_size;
+	if (d_length < remaining_size)
+	{
+	// We know there is at least room to write the \0
+		copy_length = remaining_size - 1;
+		if (s_length < copy_length)
+			copy_length = s_length;
+		ft_memcpy(dst, src, copy_length);
+		dst[copy_length] = '\0';
+	}
+	return (d_length + s_length);
 }
 
 //int	main(void)

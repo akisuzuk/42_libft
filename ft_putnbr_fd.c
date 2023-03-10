@@ -6,13 +6,16 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 14:53:51 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/07 00:44:58 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:46:58 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_len(int n)
+static	size_t	count_len(int n);
+static	size_t	ft_pow(size_t n);
+
+static	size_t	count_len(int n)
 {
 	size_t	len;
 
@@ -27,7 +30,7 @@ size_t	count_len(int n)
 	return (len);
 }
 
-size_t	ft_pow(size_t n)
+static	size_t	ft_pow(size_t n)
 {
 	size_t	ret;
 	size_t	i;
