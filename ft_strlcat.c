@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 08:10:05 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/11 20:20:25 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/11 20:37:08 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
 	size_t	dlen;
 	size_t	slen;
+	size_t	i;
 
 	slen = ft_strlen(src);
-	//if (!dst && src && dstsize == 0)
-	if (!dst)
+	if (!dst && src && dstsize == 0)
 		return (slen);
 	dlen = ft_strlen(dst);
 	i = 0;
