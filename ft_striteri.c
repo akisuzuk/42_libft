@@ -6,26 +6,23 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 13:32:54 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/08 22:33:04 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 21:37:32 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	len;
 	size_t	i;
 
-	if (s)
+	if (s && f)
 	{
 		len = ft_strlen((char *)s);
 		i = 0;
 		while (i < len)
 			f(i++, s++);
-		s -= len;
 	}
 }
 //

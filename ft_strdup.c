@@ -6,13 +6,11 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 12:44:51 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:47:04 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 21:18:25 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strdup(const char *s1);
 
 char	*ft_strdup(const char *s1)
 {
@@ -27,7 +25,7 @@ char	*ft_strdup(const char *s1)
 	}
 	ret = (char *)malloc((slen + 1) * sizeof(char));
 	if (ret == NULL)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (i <= slen)
 	{

@@ -6,15 +6,15 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 08:38:35 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/09 16:37:57 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:45:52 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str);
+static	bool	is_over_long(long ret, const char *str, int sign);
 
-bool	is_over_long(long ret, const char *str, int sign)
+static	bool	is_over_long(long ret, const char *str, int sign)
 {
 	if (sign == 1)
 	{

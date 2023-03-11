@@ -6,13 +6,11 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:40:49 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/09 16:22:46 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:22:00 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

@@ -6,13 +6,11 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 17:53:22 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:54:11 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:48:15 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_toupper(int c);
 
 int	ft_toupper(int c)
 {

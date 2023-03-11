@@ -6,13 +6,11 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 09:00:50 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/02/26 19:46:25 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:20:42 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar_fd(char c, int fd);
 
 void	ft_putchar_fd(char c, int fd)
 {

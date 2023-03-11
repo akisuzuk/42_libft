@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 11:30:57 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/02 21:39:21 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:45:17 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
-
-char	*ft_strchr(const char *s, int c);
 
 char	*ft_strchr(const char *s, int c)
 {

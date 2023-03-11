@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 22:00:36 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/07 21:51:11 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:45:06 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**freefunc(char **ret);
-char	**store_arr(char const *s, char c, char **ret, size_t count);
-char	**ft_split(char const *s, char c);
+static	char	**freefunc(char **ret);
+static	char	**store_arr(char const *s, char c, char **ret, size_t count);
 
-char	**freefunc(char **ret)
+static	char	**freefunc(char **ret)
 {
 	size_t	i;
 
@@ -30,7 +29,7 @@ char	**freefunc(char **ret)
 	return (NULL);
 }
 
-char	**store_arr(char const *s, char c, char **ret, size_t count)
+static	char	**store_arr(char const *s, char c, char **ret, size_t count)
 {
 	size_t	i;
 	size_t	j;

@@ -6,15 +6,15 @@
 /*   By: akisuzuk <XXX>                             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 18:40:53 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/07 00:44:42 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/10 20:47:59 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2);
+static	char	*store(char const *pre, char const *suf, char *ret);
 
-char	*store(char const *pre, char const *suf, char *ret)
+static	char	*store(char const *pre, char const *suf, char *ret)
 {
 	size_t	i;
 	size_t	j;
